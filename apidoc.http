@@ -1,0 +1,51 @@
+#api call for list all vehicle details
+###
+GET http://127.0.0.1:8000/vehicle/
+Accept: application/json
+
+#api call for inserting vehicle details
+###
+POST http://127.0.0.1:8000/vehicle/
+Content-Type: application/json
+
+{
+    "name":"wagnor",
+    "number":"KL-75-k-3207",
+    "fuel_type":"petrol",
+    "owner_type":"second",
+    "running_km":92000,
+    "price":220000,
+    "year":2017,
+    "phone":"9329003641"
+
+}
+
+#api call for retrieve a vehicle detail
+###
+GET http://127.0.0.1:8000/vehicle/4/
+Accept: application/json
+
+#api call for update vehicle detail
+###
+PUT http://127.0.0.1:8000/vehicle/4/
+Content-Type: application/json
+
+{
+    "id": 4,
+    "name": "maruti alto 800",
+    "number": "KL-08-Y-2107",
+    "fuel_type": "diesel",
+    "owner_type": "second",
+    "running_km": 73000.0,
+    "accident_history": false,
+    "price": 75000.0,
+    "year": "2015",
+    "phone": "7529165420",
+    "is_active": true,
+    "created_at": "2026-10-08T12:41:13.668241Z"
+  }
+
+#api call for delete a vehicle detail
+###
+DELETE http://127.0.0.1:8000/vehicle/5/
+Accept: application/json
